@@ -1,0 +1,438 @@
+body {
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* --------IMPUTS Y BUTTONS GENERICOS FORMS------ */
+.btt-generico {
+  --bg: #000;
+  --hover-bg: rgb(28, 28, 30);
+  --hover-text: skyblue;
+  color: #fff;
+  border: 1px solid var(--bg);
+  box-shadow: 0 0 .5vw rgba(146, 146, 146, 0.4), 0 0 0 .16vw transparent;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.btt-generico:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.btt-generico:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.input-generico {
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 .5vw rgba(146, 146, 146, 0.4), 0 0 0 .16vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  max-width: 190px;
+  transition: .4s;
+}
+
+.input-generico:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input-generico:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+
+
+
+/* -------[COMPONENTE GRID LOYOUT]------- */
+.grid-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: repeat (6, 1fr);
+}
+
+/*----------------------------- CONTENEDOR DEFAULT CAJA DE AUTO (BgDefault.jsx)---------------------*/
+
+.contenedorAutos{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 100px;
+
+}
+
+.tituloCar{
+
+  color:rgb(18, 17, 17);
+  font-size: 400%;
+
+}
+
+
+.propertiesContainer h3{
+color:rgb(247, 247, 247);
+}
+
+/*------------------------------------- NO SÉ -----------------------------------*/
+
+
+.caja {
+  background-color: blue;
+  margin: 0%;
+  padding: 0%;
+}
+
+/*--------------------------------------HEADER------------------------------*/
+
+.c1 {
+  grid-column: 1/-1;
+  grid-row: 1/2;   
+  background-color: cadetblue;
+} 
+
+.logoTesla{
+  width:30%;
+  height: auto;
+  }
+  
+/*--------------------------------------AUTO 1------------------------------*/
+
+.c2 {
+  /* grid-area: menu; */
+  grid-column: 1/-1;
+  grid-row: 2/3;  
+  background: linear-gradient(to right, rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.6) ), url(./Img/teslaModelY.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+}
+
+/*--------------------------------------AUTO 2------------------------------*/
+
+
+.c3 {
+  grid-column: 1/-1;
+  grid-row: 3/4;  
+  /* background-color: rgb(229, 112, 112); */
+  background: linear-gradient(to right, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.7) ), url(./Img/teslaModelSVZ.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.c3 h2{
+  color: rgb(242, 233, 233);
+  transition: 0.3s;
+}
+
+
+/*--------------------------------------AUTO 3------------------------------*/
+
+
+.c4 {
+  grid-column: 1/-1;
+  grid-row: 4/5; 
+  background: linear-gradient(to right, rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.6) ), url(./Img/teslaModelX.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/*--------------------------------------AUTO 4------------------------------*/
+
+
+.c5 {
+  grid-column: 1/-1;
+  grid-row: 5/6;  
+  background: linear-gradient(to right, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.7) ), url(./Img/teslaModelS.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/*--------------------------------------FOOTER------------------------------*/
+
+
+.c6 {
+  grid-column: 1/-1;
+  grid-row: 6/7;  
+  background-color: #0a0908;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFooter{
+  width: 10%;
+  height: auto;
+}
+
+.debug {
+  border: 1px solid black;
+}
+
+/* -------[COMPONENTE RENDERIZADO SHOP]------- */
+/* -------Input search de shop ------ */
+.wrapper-input-search {
+  position: relative;
+  --size-button: 40px;
+}
+
+.input-search {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191A1E;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input-search:focus,
+.input-search:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input-search:focus+.icon-search,
+.input-search:not(:invalid)+.icon-search {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.wrapper-input-search .icon-search {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.wrapper-input-search .icon-search svg {
+  width: 100%;
+  height: 100%;
+}
+/* -- card Shop -- */
+.custom-card-shop {
+  width: 48vw;
+  height: auto;
+  border-radius: 20px;
+  background-image: linear-gradient(163deg, #008cff 0%, #7700ff 100%);
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+  transition: all .3s;
+}
+.custom-card-shop2 {
+  width: 48vw;
+  height: auto;
+  border-radius: 18px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+}
+.custom-card-shop2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+.custom-card-shop:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+
+/* -------- [COMPONENTE MODALEXITO] ------- */
+.custom-modal {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 0.4vw;
+  border: none;
+  box-shadow: 0 0 0 .15vw skyblue;
+
+}
+
+
+/* ------------[SCREAM /ABOUTUS - CARDS] ----------- */
+.wrapper-cards-aboutus {
+  height: 45vw;
+}
+.card-miembro {
+  height: 254px;
+  width: 190px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+  overflow: hidden;
+}
+.card-miembro-image {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: #0a3394;
+  background: linear-gradient(to top, #223665c8, #000000);
+}
+.card-miembro-image img {
+  height: 14vw;
+  width: 14vw;
+  margin: 10px;
+}
+.card-miembro-title h1 {
+  --c: #807e7e;
+  color: #5f5e5e;
+  text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+}
+.card-miembro-description {
+  display: flex;
+  position: absolute;
+  gap: .5em;
+  flex-direction: column;
+  background-color: #cac8c8;
+  color: #212121;
+  height: 70%;
+  bottom: 0;
+  border-radius: 16px;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1rem;
+}
+.card-miembro-title {
+  font-size: 1.2rem;
+}
+.card-miembro-body {
+  font-size: 1rem;
+  line-height: 130%;
+}
+.card-miembro:hover .card-miembro-description {
+  transform: translateY(100%);
+}
+
+
+
+/* -------[SCREEN LOGIN - CARD]------- */
+.custom-card-login {
+  width: 36vw;
+  height: 40vw;
+  border-radius: 20px;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #ca1cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+  transition: all .3s;
+  scale: 0.95;
+}
+
+.custom-card-login2 {
+  width: 36vw;
+  height: 40vw;
+  border-radius: 18px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+  position: relative;
+}
+
+.custom-card-login2 h2 {
+  --c: #807e7e;
+  color: #5f5e5e;
+  text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+}
+
+.custom-card-login2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.custom-card-login:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 89, 255, 0.3);
+}
+
+
+
+
+/* ---------- [SCREEN ERROR404 ]------- */
+.bg-error404 {
+  background-image: url(../src/Img/bg-error404.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-bg-error404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.559); 
+}
+.wrapper-icon-error404 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon-error404 {
+  width: 200px;
+  height: auto;
+}
+
+.wrapper-icon-error404 button {
+  margin-top: 20px;
+}
+
+.wrapper-icon-error404 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
